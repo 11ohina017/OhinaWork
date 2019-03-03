@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+  <ribbon>
+    <tabs>
+      <!-- tab start : DocAdd -->
+      <!--<tab id="DocAdd_tab" insertBeforeMso="TabHome" label="DocAdd"> -->
+      <tab id="DocAdd_tab" label="DocAdd">
+        <!-- group start : 画像関係のツール -->
+        <group id="standerd_shape_group" label="オブジェクト機能" imageMso="ShapesInsertGallery" visible="true">
+
+          <!-- box start : シェイプの表示ボックス -->
+          <box id="shapse_box1">
+            <!-- オブジェクトの選択 -->
+            <toggleButton idMso="ObjectsSelect" showLabel="false" />
+            <!-- シェイプの挿入 -->
+            <control idMso="ShapesInsertGallery" showLabel="false" />
+            <!-- テキストを横書き -->
+            <toggleButton idMso="TextBoxInsertHorizontal" showLabel="false" />
+            <!-- テキストを縦書き -->
+            <toggleButton idMso="TextBoxInsertVertical" showLabel="false" />
+            <!-- 画像の挿入 -->
+            <button idMso="PictureInsertFromFile" showLabel="false" />
+          </box>
+          <!-- box end : シェイプの表示ボックス -->
+
+          <!-- box start : シェイプの書式変更ボックス -->
+          <box id="shape_box2">
+            <!-- 塗りつぶしの色 -->
+            <control idMso="ShapeFillColorPicker" showLabel="false" />
+            <!-- 枠線の色 -->
+            <control idMso="ShapeOutlineColorPicker" showLabel="false" />
+            <!-- フォントの色 -->
+            <control idMso="FontColorPicker" showLabel="false" />
+            <!-- 枠線の太さ -->
+            <control idMso="OutlineWeightGallery" showLabel="false" />
+            <!-- 枠線の種別 -->
+            <control idMso="OutlineDashesGallery" showLabel="false" />
+            <!-- 矢印の書式 -->
+            <control idMso="ArrowStyleGallery" showLabel="false" />
+            <!-- 図形の影 -->
+            <control idMso="ObjectEffectShadowGallery" showLabel="false" />
+            <!-- 3D回転 -->
+            <control idMso="_3DRotationGallery" showLabel="false" />
+            <!-- 図形の効果 -->
+            <menu idMso="ShapeEffectsMenu" showLabel="false" />
+            <!-- ウィンドウ表示パネル -->
+            <toggleButton idMso="SelectionPane" showLabel="false" />
+          </box>
+          <!-- end end : シェイプの書式変更ボックス -->
+        </group>
+        <!-- group end : 画像関係のツール -->
+
+        <!-- group start : shape_group  -->
+        <group id="shape_group" label="画像支援" visible="true">
+            <!-- 四角 -->
+            <button id="InsertRectangleRed" size="large" label="四角" image="RectangleRed" onAction="RibbonAction.main" />
+            <button id="InsertRectangleYellow" size="large" label="四角" image="RectangleYellow" onAction="RibbonAction.main" />
+            <button id="InsertRectangleBlue" size="large" label="四角" image="RectangleBlue" onAction="RibbonAction.main" />
+            <button id="InsertRectangleGreen" size="large" label="四角" image="RectangleGreen" onAction="RibbonAction.main" />
+            <!-- 吹き出し -->
+            <button id="InsertBalloonRed" size="large" label="吹き出し" image="BalloonRed" onAction="RibbonAction.main" />
+            <button id="InsertBalloonYellow" size="large" label="吹き出し" image="BalloonYellow" onAction="RibbonAction.main" />
+            <button id="InsertBalloonBlue" size="large" label="吹き出し" image="BalloonBlue" onAction="RibbonAction.main" />
+            <button id="InsertBalloonGreen" size="large" label="吹き出し" image="BalloonGreen" onAction="RibbonAction.main" />
+            <!-- 線付き吹き出し -->
+            <button id="InsertLineCallout1Red" size="large" label="線付き吹き出し" image="LineCallout1Red" onAction="RibbonAction.main" />
+            <button id="InsertLineCallout1Yellow" size="large" label="線付き吹き出し" image="LineCallout1Yellow" onAction="RibbonAction.main" />
+            <button id="InsertLineCallout1Blue" size="large" label="線付き吹き出し" image="LineCallout1Blue" onAction="RibbonAction.main" />
+            <button id="InsertLineCallout1Green" size="large" label="線付き吹き出し" image="LineCallout1Green" onAction="RibbonAction.main" />
+            <!-- 四角吹き出し -->
+            <button id="InsertRectangularCalloutRed" size="large" label="四角吹き出し" image="RectangularCalloutRed" onAction="RibbonAction.main" />
+            <button id="InsertRectangularCalloutYellow" size="large" label="四角吹き出し" image="RectangularCalloutYellow" onAction="RibbonAction.main" />
+            <button id="InsertRectangularCalloutBlue" size="large" label="四角吹き出し" image="RectangularCalloutBlue" onAction="RibbonAction.main" />
+            <button id="InsertRectangularCalloutGreen" size="large" label="四角吹き出し" image="RectangularCalloutGreen" onAction="RibbonAction.main" />
+        </group>
+        <!-- group end : shape group  -->
+
+        <!-- group start :  document_group  -->
+        <group id="document_group" label="文書支援" visible="true">
+            <!-- 強調 -->
+            <button id="insertEmphasisRectangle" size="large" label="強調" image="EmphasisRectangle" onAction="RibbonAction.main" />
+            <button id="insertEmphasisOval" size="large" label="強調" image="EmphasisOval" onAction="RibbonAction.main" />
+            <button id="ProtectDocument" size="large" label="パスワード" image="ProtectDocument" onAction="RibbonAction.main" />
+            <button id="convertAlphanumericToHalf" label="英数字半角変換" size="normal" image="convertAlphanumericToHalf" onAction="RibbonAction.main" />
+        </group>
+        <!-- group end : document_group  -->
+
+        <!-- group start : 縮小表示用ダミー -->
+        <group id="dummy" visible="false" />
+      </tab>
+      <!-- tab end : DocAdd -->
+    </tabs>
+  </ribbon>
+</customUI>
