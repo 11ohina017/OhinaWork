@@ -1,5 +1,5 @@
 Option Explicit
-Const FILLE_NAME="AnyTools.dotm"
+Const FILLE_NAME="OhinaWorki.dotm"
 
 Call CopyToAddinFolder
 
@@ -25,5 +25,5 @@ Sub CopyToAddinFolder()
     Set objWord   = Nothing
     Set objFileSys = Nothing
 
-    MsgBox "Complete!"
+    MsgBox strAddPath
 End Sub
