@@ -107,6 +107,11 @@ pptxと同様に、``installWordAddin.vbs``を実行するとインストール�
 ## ライセンス
 
 当ソフトはフリーソフトウェアですが、
+同梱されているアイコンセットについては、提供先のベンダが著作権を所持しています。
+
+
+### Azureアイコンセットのライセンス
+
 同梱されているAzureのアイコンについては著作権はMicrosoft社が所持しており、
 ライセンスはMITライセンスとなります。
 
@@ -132,3 +137,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 https://www.microsoft.com/en-us/download/details.aspx?id=41937
 
 Microsoft社ライセンスの詳細については同梱されている``pptx\img\azure-icons\LICENSE-CODE``をご参照下さい。
+
+### AWSアイコンセットの挿入
+
+AWSのアイコンセットについては、ライセンスの記載はありませんが、
+以下のURLの記載に従って利用しています。
+
+https://aws.amazon.com/jp/architecture/icons/?nc1=h_ls
