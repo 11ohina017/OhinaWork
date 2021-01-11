@@ -2,6 +2,8 @@
 '' 対象のアドインファイル
 Const FILLE_NAME = "OhinaWork.ppam"
 Const ADDIN_NAME = "OhinaWork"
+Const AZURE_ICON = "azure-icons"
+Const AWS_ICON = "aws-icons"
 
 ' メイン処理
 Call installAddin
@@ -36,14 +38,17 @@ Sub installAddin()
     
     ' アドインフォルダー取得
     addinFolderPath = objExcel.Application.UserLibraryPath
-
+    imageAddinFolderPath = addinFolderPath & "\img"    
+    azureAddinFolderPath = imageAddinFolderPath & "\" &AZURE_ICON
+    awsAddinFolderPath = imageAddinFolderPath & "\" & AWS_ICON
+        
     ' カレントフォルダー取得
     currentFolderPath = Replace(WScript.ScriptFullName, WScript.ScriptName, "")
     imageFolderPath = currentFolderPath & "\img"
-
+    
     ' アドインファイルパスを取得
     addinFilePath = objFileSys.BuildPath(addinFolderPath, FILLE_NAME)
-    
+
     'アドインが登録済みの場合は解除を実施
     For count = 1 To objAddins.Count
       Set objAddin = objAddins.item(count)
@@ -61,6 +66,15 @@ Sub installAddin()
     ' 対象のアドインファイルをアドインフォルダに移動
     objFileSys.CopyFile currentFilePath, addinFilePath ,True
     
+    ' フォルダ削除
+    If objFileSys.FolderExists(azureAddinFolderPath) Then
+        objFileSys.DeleteFolder azureAddinFolderPath, True
+    End If
+    If objFileSys.FolderExists(awsAddinFolderPath) Then
+        objFileSys.DeleteFolder awsAddinFolderPath, True
+    End If
+
+ 
     ' 画像フォルダをアドインフォルダにコピー
     objFileSys.CopyFolder imageFolderPath, addinFolderPath, True
  
